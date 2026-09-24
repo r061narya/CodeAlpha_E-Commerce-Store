@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details - ShopEase</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ShopEase
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#products">Products</a>
+            <a href="index.html#categories">Categories</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+            <a href="cart.html" class="cart-btn">
+                Cart (<span id="cartCount">0</span>)
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- Product Details -->
+
+    <main class="product-details">
+
+        <div class="product-details-image">
+
+            <img
+                id="productImage"
+                src="https://via.placeholder.com/500"
+                alt="Product"
+            >
+
+        </div>
+
+
+        <div class="product-details-info">
+
+            <h1 id="productName">
+                Product Name
+            </h1>
+
+            <h2 id="productPrice">
+                ₹0
+            </h2>
+
+            <p id="productDescription">
+                Product description will appear here.
+            </p>
+
+            <p>
+                Stock: <span id="productStock">0</span>
+            </p>
+
+            <button
+                id="addProductButton"
+                class="add-cart-btn"
+            >
+                Add to Cart
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

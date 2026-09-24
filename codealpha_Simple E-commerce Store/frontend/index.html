@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - Online Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ShopEase
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#products">Products</a>
+            <a href="#categories">Categories</a>
+            <a href="#">About</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+                <button onclick="searchProducts()">Search</button>
+            </div>
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+            <a href="cart.html" class="cart-btn">
+                Cart (<span id="cartCount">0</span>)
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Shop Everything You Love
+            </h1>
+
+            <p>
+                Discover quality products at the best prices.
+            </p>
+
+            <a href="#products" class="hero-btn">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories" id="categories">
+
+        <h2>Shop by Category</h2>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                <div class="category-icon">📱</div>
+                <h3>Electronics</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">👕</div>
+                <h3>Fashion</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">⌚</div>
+                <h3>Accessories</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🏠</div>
+                <h3>Home</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products" id="products">
+
+        <div class="section-heading">
+
+            <h2>Our Products</h2>
+
+            <select id="sortProducts" onchange="sortProducts()">
+
+                <option value="default">
+                    Sort By
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="product-container" id="productContainer">
+
+            <!-- Product 1 -->
+
+             <!-- Product 2 -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+                <h3>ShopEase</h3>
+
+                <p>
+                    Your simple online shopping destination.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="#products">Products</a>
+                <a href="cart.html">Cart</a>
+            </div>
+
+            <div>
+                <h3>Support</h3>
+
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 ShopEase. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

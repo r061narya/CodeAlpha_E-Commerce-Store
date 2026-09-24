@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - ShopEase</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            ShopEase
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Checkout -->
+
+    <main class="checkout-page">
+
+        <h1>Checkout</h1>
+
+
+        <div class="checkout-container">
+
+
+            <!-- Customer Details -->
+
+            <div class="checkout-form">
+
+                <h2>Delivery Information</h2>
+
+                <form id="checkoutForm">
+
+                    <label for="checkoutName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="checkoutName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter phone number"
+                        required
+                    >
+
+
+                    <label for="address">
+                        Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        placeholder="Enter delivery address"
+                        required
+                    ></textarea>
+
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Enter city"
+                        required
+                    >
+
+
+                    <label for="pincode">
+                        PIN Code
+                    </label>
+
+                    <input
+                        type="text"
+                        id="pincode"
+                        placeholder="Enter PIN code"
+                        required
+                    >
+
+
+                    <button type="submit">
+                        Place Order
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Order Summary -->
+
+            <div class="checkout-summary">
+
+                <h2>Order Summary</h2>
+
+                <div id="checkoutItems">
+
+                    <!-- Items will appear here -->
+
+                </div>
+
+                <hr>
+
+                <h3>
+                    Total:
+                    ₹<span id="checkoutTotal">0</span>
+                </h3>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
