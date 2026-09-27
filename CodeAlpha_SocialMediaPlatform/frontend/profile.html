@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MiniSocial - Profile</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+
+            <!-- Logo -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                MiniSocial
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="profile.html"
+                    class="active"
+                >
+                    Profile
+                </a>
+
+                <a
+                    href="login.html"
+                    class="logout-link"
+                    onclick="logout(event)"
+                >
+                    Logout
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="profile-container">
+
+
+        <!-- =========================
+             PROFILE CARD
+        ========================== -->
+
+        <section class="profile-card card">
+
+
+            <!-- Profile Top -->
+
+            <div class="profile-top">
+
+
+                <!-- Profile Picture -->
+
+                <div
+                    class="profile-avatar"
+                    id="profileAvatar"
+                >
+
+                    <span id="profileAvatarLetter">
+                        U
+                    </span>
+
+                    <img
+                        id="profileAvatarImage"
+                        src=""
+                        alt="Profile picture"
+                        hidden
+                    >
+
+                </div>
+
+
+                <!-- Profile Information -->
+
+                <div class="profile-info">
+
+
+                    <h1 id="profileUsername">
+                        Username
+                    </h1>
+
+
+                    <p
+                        id="profileEmail"
+                        class="profile-email"
+                    >
+                        user@example.com
+                    </p>
+
+
+                    <p
+                        id="profileBio"
+                        class="profile-bio"
+                    >
+                        No bio yet.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 PROFILE STATS
+            ========================== -->
+
+            <div class="profile-stats">
+
+
+                <div class="profile-stat">
+
+                    <strong id="postCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Posts
+                    </span>
+
+                </div>
+
+
+                <div class="profile-stat">
+
+                    <strong id="followersCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Followers
+                    </span>
+
+                </div>
+
+
+                <div class="profile-stat">
+
+                    <strong id="followingCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Following
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 PROFILE ACTION
+            ========================== -->
+
+            <div class="profile-actions">
+
+
+                <button
+                    type="button"
+                    id="editProfileBtn"
+                    class="primary-btn"
+                >
+                    Edit Profile
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             EDIT PROFILE
+        ========================== -->
+
+        <section
+            id="editProfileSection"
+            class="edit-profile-card card"
+            hidden
+        >
+
+
+            <div class="section-title">
+
+                <h2>
+                    Edit Profile
+                </h2>
+
+            </div>
+
+
+            <!-- Bio -->
+
+            <div class="form-group">
+
+                <label for="bioInput">
+                    Bio
+                </label>
+
+                <textarea
+                    id="bioInput"
+                    maxlength="150"
+                    placeholder="Tell people something about yourself..."
+                ></textarea>
+
+                <span class="character-count">
+                    Maximum 150 characters
+                </span>
+
+            </div>
+
+
+            <!-- Profile Picture -->
+
+            <div class="form-group">
+
+                <label for="profileImageInput">
+                    Profile Picture
+                </label>
+
+                <input
+                    type="file"
+                    id="profileImageInput"
+                    accept="image/jpeg,image/png,image/webp"
+                >
+
+            </div>
+
+
+            <!-- Edit Actions -->
+
+            <div class="edit-profile-actions">
+
+
+                <button
+                    type="button"
+                    id="saveProfileBtn"
+                    class="primary-btn"
+                >
+                    Save Changes
+                </button>
+
+
+                <button
+                    type="button"
+                    id="cancelEditBtn"
+                    class="secondary-btn"
+                >
+                    Cancel
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             USER POSTS
+        ========================== -->
+
+        <section class="profile-posts-section">
+
+
+            <div class="section-title">
+
+                <h2>
+                    Posts
+                </h2>
+
+            </div>
+
+
+            <!-- Posts -->
+
+            <div
+                id="profilePosts"
+                class="profile-posts"
+            >
+
+
+                <!-- Loading -->
+
+                <div
+                    id="profilePostsLoading"
+                    class="feed-message card"
+                >
+
+                    <p>
+                        Loading posts...
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+
+</html>

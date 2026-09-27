@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MiniSocial - Post</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+
+            <!-- Logo -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                MiniSocial
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+                <a
+                    href="login.html"
+                    class="logout-link"
+                    onclick="logout(event)"
+                >
+                    Logout
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="post-page-container">
+
+
+        <!-- Back Button -->
+
+        <a
+            href="index.html"
+            class="back-link"
+        >
+            ← Back to Home
+        </a>
+
+
+
+        <!-- =========================
+             SINGLE POST
+        ========================== -->
+
+        <article
+            id="singlePost"
+            class="single-post card"
+        >
+
+
+            <!-- Loading State -->
+
+            <div
+                id="postLoading"
+                class="feed-message"
+            >
+
+                <p>
+                    Loading post...
+                </p>
+
+            </div>
+
+
+            <!-- Post Content
+                 JavaScript will fill this
+            -->
+
+            <div
+                id="postContent"
+                hidden
+            >
+
+
+                <!-- Post Header -->
+
+                <div class="post-header">
+
+
+                    <div class="post-user">
+
+
+                        <!-- Avatar -->
+
+                        <div
+                            class="avatar"
+                            id="postAuthorAvatar"
+                        >
+                            U
+                        </div>
+
+
+                        <!-- Author -->
+
+                        <div class="user-info">
+
+                            <h3 id="postAuthorName">
+                                Username
+                            </h3>
+
+                            <span id="postCreatedAt">
+                                @username · just now
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Post Text -->
+
+                <div
+                    id="singlePostText"
+                    class="post-content"
+                >
+                    Post content
+                </div>
+
+
+
+                <!-- Post Image -->
+
+                <div
+                    id="singlePostImageContainer"
+                    class="post-image-container"
+                    hidden
+                >
+
+                    <img
+                        id="singlePostImage"
+                        src=""
+                        alt="Post image"
+                    >
+
+                </div>
+
+
+
+                <!-- Post Stats -->
+
+                <div class="post-stats">
+
+
+                    <span id="singlePostLikes">
+                        0 Likes
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- Like Button -->
+
+                <div class="post-actions">
+
+                    <button
+                        type="button"
+                        id="singlePostLikeBtn"
+                        class="post-action-btn"
+                    >
+                        Like
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- =========================
+             COMMENTS
+        ========================== -->
+
+        <section
+            id="commentsSection"
+            class="comments-section card"
+        >
+
+
+            <!-- Comments Header -->
+
+            <div class="section-title">
+
+                <h2>
+                    Comments
+                </h2>
+
+            </div>
+
+
+
+            <!-- Add Comment -->
+
+            <form
+                id="commentForm"
+                class="comment-form"
+            >
+
+
+                <textarea
+                    id="commentInput"
+                    placeholder="Write a comment..."
+                    maxlength="500"
+                    required
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    Add Comment
+                </button>
+
+
+            </form>
+
+
+
+            <!-- Comments List -->
+
+            <div
+                id="commentsList"
+                class="comments-list"
+            >
+
+
+                <!-- Loading -->
+
+                <div
+                    id="commentsLoading"
+                    class="feed-message"
+                >
+
+                    <p>
+                        Loading comments...
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+    <script src="js/auth.js"></script>
+    <script src="js/post.js"></script>
+
+
+    </main>
+
+</body>
+
+</html>

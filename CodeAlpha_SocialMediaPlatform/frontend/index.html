@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MiniSocial - Home</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+
+            <!-- Logo -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                MiniSocial
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="nav-links">
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+                    Home
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+                <a
+                    href="login.html"
+                    class="logout-link"
+                    onclick="logout(event)"
+                >
+                    Logout
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="home-container">
+
+
+        <!-- =========================
+             CREATE POST
+        ========================== -->
+
+        <section class="create-post card">
+
+
+            <!-- Current User -->
+
+            <div class="post-user">
+
+                <div
+                    class="avatar"
+                    id="currentUserAvatar"
+                >
+                    U
+                </div>
+
+
+                <div class="user-info">
+
+                    <h3 id="currentUsername">
+                        User
+                    </h3>
+
+                    <span id="currentUserHandle">
+                        @user
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Post Text -->
+
+            <div class="post-input-area">
+
+                <textarea
+                    id="postInput"
+                    placeholder="What's on your mind?"
+                    maxlength="1000"
+                ></textarea>
+
+            </div>
+
+
+            <!-- Post Options -->
+
+            <div class="post-create-actions">
+
+
+                <!-- Image Upload -->
+
+                <label
+                    for="imageInput"
+                    class="image-upload-btn"
+                >
+
+                    <span class="image-icon">
+                        +
+                    </span>
+
+                    Add Image
+
+                </label>
+
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/jpeg,image/png,image/webp"
+                    hidden
+                >
+
+
+                <!-- Post Button -->
+
+                <button
+                    type="button"
+                    id="createPostBtn"
+                    class="primary-btn"
+                >
+                    Post
+                </button>
+
+
+            </div>
+
+
+            <!-- Image Preview -->
+
+            <div
+                id="imagePreview"
+                class="image-preview"
+                hidden
+            >
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt="Selected image"
+                >
+
+
+                <button
+                    type="button"
+                    id="removeImageBtn"
+                    class="remove-image-btn"
+                >
+                    Remove Image
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             FEED HEADER
+        ========================== -->
+
+        <div class="feed-header">
+
+            <h2>
+                Your Feed
+            </h2>
+
+        </div>
+
+
+
+        <!-- =========================
+             POSTS
+        ========================== -->
+
+        <section
+            id="feed"
+            class="feed"
+        >
+
+
+            <!--
+                JavaScript will load
+                real posts from backend here.
+            -->
+
+
+            <!-- Loading State -->
+
+            <div
+                id="feedLoading"
+                class="feed-message card"
+            >
+
+                <p>
+                    Loading posts...
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         POST TEMPLATE
+         JavaScript will use this
+    ========================== -->
+
+    <template id="postTemplate">
+
+
+        <article class="post-card card">
+
+
+            <!-- Post Header -->
+
+            <div class="post-header">
+
+
+                <div class="post-user">
+
+
+                    <!-- User Avatar -->
+
+                    <div
+                        class="avatar post-avatar"
+                        data-user-avatar
+                    >
+                        U
+                    </div>
+
+
+                    <!-- User Information -->
+
+                    <div class="user-info">
+
+                        <h3 data-username>
+                            Username
+                        </h3>
+
+                        <span data-post-time>
+                            @username · just now
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Post Content -->
+
+            <div
+                class="post-content"
+                data-post-content
+            >
+
+                Post content
+
+            </div>
+
+
+
+            <!-- Post Image -->
+
+            <div
+                class="post-image-container"
+                data-post-image-container
+                hidden
+            >
+
+                <img
+                    src=""
+                    alt="Post image"
+                    data-post-image
+                >
+
+            </div>
+
+
+
+            <!-- Post Stats -->
+
+            <div class="post-stats">
+
+                <span data-like-count>
+                    0 Likes
+                </span>
+
+                <span data-comment-count>
+                    Comments
+                </span>
+
+            </div>
+
+
+
+            <!-- Post Actions -->
+
+            <div class="post-actions">
+
+
+                <button
+                    type="button"
+                    class="post-action-btn"
+                    data-like-btn
+                >
+                    Like
+                </button>
+
+
+                <a
+                    href="post.html"
+                    class="post-action-btn"
+                    data-comment-link
+                >
+                    Comment
+                </a>
+
+
+            </div>
+
+
+        </article>
+
+
+    </template>
+
+    <script src="js/auth.js"></script>
+    <script src="js/feed.js"></script>
+    
+</body>
+
+</html>

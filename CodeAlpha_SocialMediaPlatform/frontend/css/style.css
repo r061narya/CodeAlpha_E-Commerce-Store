@@ -1,0 +1,1238 @@
+/* =========================================================
+   MINISOCIAL - GLOBAL CSS
+========================================================= */
+
+
+/* =========================================================
+   1. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f7fb;
+
+    color: #1f2937;
+
+    line-height: 1.5;
+
+    min-height: 100vh;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   2. COMMON
+========================================================= */
+
+.card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+.primary-btn {
+    border: none;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+
+.secondary-btn {
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+.secondary-btn:hover {
+    background: #f3f4f6;
+}
+
+
+/* =========================================================
+   3. NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.navbar-container {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 15px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-size: 23px;
+
+    font-weight: 700;
+
+    color: #2563eb;
+}
+
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+
+.nav-links a {
+    color: #4b5563;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: 0.2s ease;
+}
+
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+
+.nav-links a.active {
+    color: #2563eb;
+
+    font-weight: 700;
+}
+
+
+.nav-links .logout-link {
+    color: #dc2626;
+}
+
+
+.nav-links .logout-link:hover {
+    color: #b91c1c;
+}
+
+
+/* =========================================================
+   4. AUTH PAGES
+========================================================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+
+.auth-card {
+    width: 100%;
+
+    max-width: 420px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.auth-logo {
+    text-align: center;
+
+    color: #2563eb;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+.auth-card h1 {
+    text-align: center;
+
+    font-size: 26px;
+
+    margin-bottom: 8px;
+}
+
+
+.auth-subtitle {
+    text-align: center;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   5. FORMS
+========================================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+
+    color: #374151;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    transition: 0.2s ease;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+.form-group textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+.auth-card .primary-btn {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+
+.auth-footer {
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+.auth-footer a {
+    color: #2563eb;
+
+    font-weight: 600;
+}
+
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   6. HOME PAGE
+========================================================= */
+
+.home-container {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px 50px;
+}
+
+
+/* =========================================================
+   7. USER ROW
+========================================================= */
+
+.post-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.avatar {
+    width: 46px;
+
+    height: 46px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.avatar img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.user-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1px;
+}
+
+
+.user-info h3 {
+    font-size: 16px;
+
+    color: #111827;
+}
+
+
+.user-info span {
+    font-size: 13px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   8. CREATE POST
+========================================================= */
+
+.create-post {
+    padding: 20px;
+
+    margin-bottom: 28px;
+}
+
+
+.post-input-area {
+    margin-top: 18px;
+}
+
+
+.post-input-area textarea {
+    width: 100%;
+
+    min-height: 100px;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #111827;
+}
+
+
+.post-input-area textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+.post-create-actions {
+    margin-top: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.image-upload-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #2563eb;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.image-upload-btn:hover {
+    text-decoration: underline;
+}
+
+
+.image-icon {
+    width: 22px;
+
+    height: 22px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 5px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   9. IMAGE PREVIEW
+========================================================= */
+
+.image-preview {
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.image-preview img {
+    width: 100%;
+
+    max-height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+.remove-image-btn {
+    margin-top: 10px;
+
+    border: none;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    padding: 7px 12px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.remove-image-btn:hover {
+    background: #fecaca;
+}
+
+
+/* =========================================================
+   10. FEED HEADER
+========================================================= */
+
+.feed-header {
+    margin-bottom: 15px;
+}
+
+
+.feed-header h2 {
+    font-size: 21px;
+
+    color: #111827;
+}
+
+
+/* =========================================================
+   11. FEED
+========================================================= */
+
+.feed {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.feed-message {
+    padding: 25px;
+
+    text-align: center;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   12. POST CARD
+========================================================= */
+
+.post-card {
+    padding: 20px;
+}
+
+
+.post-header {
+    margin-bottom: 15px;
+}
+
+
+.post-content {
+    font-size: 15px;
+
+    color: #1f2937;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+
+    word-break: break-word;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   13. POST IMAGE
+========================================================= */
+
+.post-image-container {
+    width: 100%;
+
+    margin-bottom: 15px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+.post-image-container img {
+    width: 100%;
+
+    max-height: 550px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   14. POST STATS
+========================================================= */
+
+.post-stats {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   15. POST ACTIONS
+========================================================= */
+
+.post-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding-top: 12px;
+}
+
+
+.post-action-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #4b5563;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    padding: 4px 0;
+}
+
+
+.post-action-btn:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   16. PROFILE PAGE
+========================================================= */
+
+.profile-container {
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px 50px;
+}
+
+
+.profile-card {
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.profile-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.profile-avatar {
+    width: 100px;
+
+    height: 100px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    font-size: 36px;
+
+    font-weight: 700;
+}
+
+
+.profile-avatar img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.profile-info {
+    flex: 1;
+}
+
+
+.profile-info h1 {
+    font-size: 25px;
+
+    margin-bottom: 3px;
+}
+
+
+.profile-email {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+
+.profile-bio {
+    color: #374151;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   17. PROFILE STATS
+========================================================= */
+
+.profile-stats {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    border-top: 1px solid #e5e7eb;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    margin: 25px 0;
+
+    padding: 18px 0;
+}
+
+
+.profile-stat {
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.profile-stat strong {
+    font-size: 20px;
+
+    color: #111827;
+}
+
+
+.profile-stat span {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.profile-actions {
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   18. EDIT PROFILE
+========================================================= */
+
+.edit-profile-card {
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.section-title {
+    margin-bottom: 18px;
+}
+
+
+.section-title h2 {
+    font-size: 20px;
+
+    color: #111827;
+}
+
+
+.character-count {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+.edit-profile-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+.profile-posts-section {
+    margin-top: 25px;
+}
+
+
+.profile-posts {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   19. SINGLE POST PAGE
+========================================================= */
+
+.post-page-container {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px 50px;
+}
+
+
+.back-link {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #2563eb;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+.single-post {
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.comments-section {
+    padding: 20px;
+}
+
+
+.comment-form {
+    margin-bottom: 25px;
+}
+
+
+.comment-form textarea {
+    width: 100%;
+
+    min-height: 90px;
+
+    resize: vertical;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    margin-bottom: 10px;
+}
+
+
+.comment-form textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+.comments-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.comment {
+    padding: 13px;
+
+    background: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+}
+
+
+.comment-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 5px;
+}
+
+
+.comment-avatar {
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    overflow: hidden;
+}
+
+
+.comment-avatar img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.comment-username {
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.comment-text {
+    font-size: 14px;
+
+    color: #374151;
+
+    margin-left: 40px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   20. RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .navbar-container {
+        padding: 13px 15px;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .nav-links {
+        gap: 14px;
+    }
+
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+
+    .home-container,
+    .profile-container,
+    .post-page-container {
+        padding: 20px 12px 40px;
+    }
+
+
+    .create-post,
+    .post-card,
+    .profile-card,
+    .edit-profile-card,
+    .single-post,
+    .comments-section {
+        padding: 16px;
+    }
+
+
+    .profile-top {
+        align-items: flex-start;
+    }
+
+
+    .profile-avatar {
+        width: 80px;
+
+        height: 80px;
+
+        font-size: 30px;
+    }
+
+
+    .profile-info h1 {
+        font-size: 21px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .navbar-container {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .auth-card {
+        padding: 25px 20px;
+    }
+
+
+    .auth-card h1 {
+        font-size: 23px;
+    }
+
+
+    .post-create-actions {
+        align-items: flex-end;
+    }
+
+
+    .profile-top {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .profile-info {
+        width: 100%;
+    }
+
+
+    .profile-stats {
+        gap: 10px;
+    }
+
+
+    .profile-stat strong {
+        font-size: 18px;
+    }
+
+
+    .edit-profile-actions {
+        flex-direction: column;
+    }
+
+
+    .edit-profile-actions button {
+        width: 100%;
+    }
+
+}
+
+/* Hide elements with the hidden attribute */
+[hidden] {
+    display: none !important;
+}
